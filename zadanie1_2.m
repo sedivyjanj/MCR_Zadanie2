@@ -1,6 +1,6 @@
 clear;
 clc;
-sim('model.slx');
+sim('model1.slx');
 figure
 plot(E2);
 hold on;
