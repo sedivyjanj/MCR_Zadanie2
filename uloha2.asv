@@ -1,9 +1,0 @@
-%vypocty z PD regulatora
-b = -((log(0.1138/0.6798))/(sqrt(pi^2+(log(0.1138/0.6798))^2))) %vypocet b
-Tp=(1/(pi*3))*(26.53-7.717)*(sqrt(1-b^2)) %vypocet Tp casova konstanta
-sum = 7.717+14.34+20.07;
-D = (sum/3)-((4/6)*(26.53-7.717))
-
-%vypocet spravny
-P=((1/1337)/15000)
-Td = 14;
