@@ -1,30 +1,40 @@
 clear;
 clc;
-sim('model1.slx');
+sim('model2.slx');
+
+%prvy figure, na vykreslenie najlepsieho regulatora
 figure
-plot(E2);
+plot(E1);
 hold on;
-plot(U2);
+plot(U1);
 hold on;
-plot(Y2);
+plot(Y1);
 title("Najlepsi navrh PD");
 xlabel("time");
 ylabel("hodnoty");
 legend('E(t)','U(t)','Y(t)');
 grid on;
 
-figure %bez naslin, lebo dava hodnoty az 10^8
-plot(Y1);
-hold on;
-plot(Y2,'--');
-grid on
-title("Vsetky reg. v jednom grafe");
-xlabel("time");
-ylabel("hodnoty");
-legend('Butterworth','Graham');
 
-figure
-plot(Y3)
-title("Naslin");
-xlabel("time");
-ylabel("hodnoty");
+
+%druhy figure na vykreslenie y(t) pre viacere schemy
+%figure 
+%plot(Y1);
+%hold on;
+%plot(Y2,'--');
+%grid on
+%title("Vsetky reg. v jednom grafe pre y(t)");
+%xlabel("time");
+%ylabel("hodnoty");
+%legend('Metoda inverznej dynamiky','Ladenim');
+
+%treti figure na vykreslenie u(t) pre viacere schemy
+%figure 
+%plot(U1);
+%hold on;
+%plot(U2,'--');
+%grid on
+%title("Vsetky reg. v jednom grafe pre u(t)");
+%xlabel("time");
+%ylabel("hodnoty");
+%legend('Metoda inverznej dynamiky','Ladenim');
